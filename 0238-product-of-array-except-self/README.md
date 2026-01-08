@@ -23,3 +23,24 @@
 
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong>&nbsp;Can you solve the problem in <code>O(1)</code>&nbsp;extra&nbsp;space complexity? (The output array <strong>does not</strong> count as extra space for space complexity analysis.)</p>
+
+----------------------------------------------------------------------------------------
+## 💡 My Approach
+- Used **prefix product** and **suffix product** technique.
+- First pass calculates product of elements to the left of each index.
+- Second pass multiplies it with product of elements to the right.
+- Avoids division and handles zero values naturally.
+
+---
+
+## ⏱ Complexity Analysis
+- **Time Complexity:** O(n)
+- **Space Complexity:** O(1) (excluding output array)
+
+---
+
+## ✍️ Personal Notes
+- Initial thought was using division, but it violates constraints.
+- Prefix–suffix pattern is very common in array problems.
+- Important to initialize result array with 1s.
+- This approach is reusable for range product–type problems.
